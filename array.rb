@@ -12,8 +12,9 @@ class Matr
 	our_array=Matr.new.mt
 	# matrix output
 	puts "so, array is #{our_array.inspect}"
+	#negative numbers output
+	negative=our_array.flatten.reject{|num| num>0}
 	# negative sum
 
-	#negative numbers uotput
-	
+
 end

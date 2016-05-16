@@ -1,4 +1,5 @@
 class Matr
+	#creates matrix
 	def mt
 		martix_numbers=Array.new(4).map{|col| col=Array.new(4).map{|num| num=rand(21)-10}}
 		#matrix_numbers = []
@@ -9,12 +10,18 @@ class Matr
 		 #	end
 		#end
 	end
-	our_array=Matr.new.mt
-	# matrix output
-	puts "so, array is #{our_array.inspect}"
-	#negative numbers output
-	negative=our_array.flatten.reject{|num| num>0}
-	# negative sum
+	#shows array
+	def show_array
+		our_array=Matr.new.mt	
+		puts "so, array is #{our_array.inspect}"
+		return (our_array)
+	end
 
-
+	#shows negative numbers and their sum	
+	def negative
+		negative_numbers=show_array.flatten.reject{|num| num>=0}	
+		puts "negative numbers #{negative_numbers}"
+		puts "negative elements sum #{negative_numbers.inject(0){|sum, elem| sum+=elem}}"
+	end
+	matrix=Matr.new.negative #entrance point
 end

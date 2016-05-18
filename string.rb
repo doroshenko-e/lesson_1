@@ -6,42 +6,33 @@
 
 class Arr
 
-	#
+	# String and separator
 	def initialize
 		puts "Enter string"	
 		@str = gets.chomp.to_s
 
 		puts "Enter devide symbol"
-		@devs = gets.chomp.to_s
+		@dev_s = gets.chomp.to_s
 	end
 
-	#
-
+	# Creates arrays out of string without separator
 	def str_to_arr
-		our_array = @str.split(@dev)
-		number = our_array.size
-		final_array = []
-			number >= 1 ?  : 
-			cut_array = our_array.last(num)
-			puts "#{cut_array}")
-			
-			#final_array += cut_array.join(dev)
-		end
-
+		our_array = @str.split(@dev_s)
 	end
 
-	#
-	#def change
-	#	number = Arr.new.str_to_arr.size
-	#	cut_array = @our_array
-		#final_array += cut_array
-	#end
-	array = Arr.new.str_to_arr
-	#n_array = array.size
-	#cut_array = array.last(n_array)
-	#puts "#{array}"
+	#Creates string adding separator
+	def arr_to_str
+		@elements_in_array = str_to_arr.size	
+		final_array = Array.new(@elements_in_array)
+		{str_to_arr.last(elements_num(@elements_in_array)).join(@dev_s) }
+	end
 
+	# Have to back final number for str_to_arr.last, but don't
+	def elements_num(num)
+		num == 1 ?  0 : elements(num - 1)
+	end
 
-def factorial n
-  n > 1 ? n * factorial(n - 1) : 1
+	array = Arr.new
+	puts array.arr_to_str
+	
 end

@@ -2,8 +2,24 @@
 #{'yes' => 23, 'b' => 'travel', 'yesterday' => 34, 5 => '234', :yesss => :fg, try: 30, key: 'some value', 'yesterday1' => 34, 'yesteryear' => 2014}
 #
 #Найти количество ключей, значение которых начинается на "yes"
+class Yes
 
-default={'yes' => 23, 'b' => 'travel', 'yesterday' => 34, 5 => '234', 
-	:yesss => :fg, try: 30, key: 'some value', 'yesterday1' => 34, 'yesteryear' => 2014}
+	def initialize
+		@default={'yes' => 23, 'b' => 'travel', 'yesterday' => 34, 5 => '234', 
+		:yesss => :fg, try: 30, key: 'some value', 'yesterday1' => 34, 'yesteryear' => 2014}	
+		
+	end
 
-puts "number of keys with 'yes': #{default.keys.grep(/yes/).length}"
+	def num_yes
+		num = @default.keys.grep(/^yes/).size
+	end
+
+	number = Yes.new
+	puts "Number of 'yes' on the begining of keys is => #{number.num_yes}"
+	#def  num_keys(recur)
+		
+	#	recur < 5 ? num_keys(recur + 1) : (puts "#{recur}")
+
+	#end
+
+end

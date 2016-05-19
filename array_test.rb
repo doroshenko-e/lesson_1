@@ -9,11 +9,9 @@ class TestMatr < Minitest::Test
 
 	def test_show_array
 		assert_equal 4, @matr.show_array.size
-		
 	end
 
 	def test_negative
-		assert_equal 8, @matr.negative.size		
 	end
 
 end

@@ -8,10 +8,10 @@ class Seporated
 
 	# String and separator
 	def initialize
-		puts "Enter string"	
+		#puts "Enter string"	
 		@str = 'Fizz::Buzz::Wizz' #gets.chomp.to_s
 
-		puts "Enter devide symbol"
+		#puts "Enter devide symbol"
 		@dev_s = '::' #gets.chomp.to_s
 	end
 
@@ -22,8 +22,7 @@ class Seporated
 
 	#Creates string adding separator 
 	def arr_of_str
-		@elements_in_array = str_to_arr.size	
-		num = @elements_in_array
+		num = str_to_arr.size	
 		final_array = []
 
 		while num > 0 do 

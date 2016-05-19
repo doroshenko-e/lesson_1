@@ -4,15 +4,15 @@
 #Level 3 - заюзать мета-программирование, расширить класс String )
 
 
-class Arr
+class Seporated
 
 	# String and separator
 	def initialize
 		puts "Enter string"	
-		@str = gets.chomp.to_s
+		@str = 'Fizz::Buzz::Wizz' #gets.chomp.to_s
 
 		puts "Enter devide symbol"
-		@dev_s = gets.chomp.to_s
+		@dev_s = '::' #gets.chomp.to_s
 	end
 
 	# Creates arrays out of string without separator
@@ -20,28 +20,21 @@ class Arr
 		our_array = @str.split(@dev_s)
 	end
 
-	#Creates string adding separator
-	def arr_to_str
+	#Creates string adding separator 
+	def arr_of_str
 		@elements_in_array = str_to_arr.size	
-		num = 0
-		arr_cut = []
+		num = @elements_in_array
 		final_array = []
-		#arr_cut = str_to_arr.last(num).join(@dev_s)
 
-		#final_array = Array.new(@elements_in_array){str_to_arr.last(@elements_in_array).join(@dev_s)}
-		while num < @elements_in_array do 
-			arr_cut[num] = str_to_arr.last(num).join(@dev_s)
-			final_array =final_array + arr_cut[num]
-			num += 1
+		while num > 0 do 
+			final_array[num-1] = str_to_arr.first(num).join(@dev_s)
+			num -= 1
 		end
-			
+		return final_array.reverse
 	end
 
-	# Have to back final number for str_to_arr.last, but don't
-	#def elements_num(num)
-	#	num == 1 ?  0 : elements(num - 1)
-	#end
-	array = Arr.new
-	puts array.arr_to_str
+	# Entry point and result output
+	array = Seporated.new
+	puts "Array is #{array.arr_of_str}"
 
 end

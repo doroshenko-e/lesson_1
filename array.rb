@@ -19,8 +19,6 @@ class Matr
 
 	# Shows results
 	puts "Matrix is =>\n#{matrix.show_array}\n"
-	puts "Negative numbers and sum\n"
-	puts "Number of negative elements => #{matrix.negative.size}"
 	puts "Negative elements sum => #{matrix.negative}"
 
 end

@@ -12,6 +12,7 @@ class TestMatr < Minitest::Test
 	end
 
 	def test_negative
+		assert_equal -39, @matr.negative
 	end
 
 end

@@ -2,7 +2,8 @@ class Matr
 
 	#creates matrix
 	def initialize (w, h)
-		@martix_numbers=Array.new(w){Array.new(h){rand(21)-10}}
+		@martix_numbers=[[2, 2, -7, -7], [3, -8, 10, 3], [0, 8, -9, -1], [-7, 8, 8, 0]]
+#Array.new(w){Array.new(h){rand(21)-10}}
 	end
 
 	#shows array

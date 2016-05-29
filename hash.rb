@@ -26,6 +26,6 @@ class Yes
 	#end
 
 	#num_keys = @default.keys.size
-	#str_arr = Array.new(num_keys){number.num_keys(num).to_s}
+	#str_arr = Array.new(num_keys){number.num_keys(num).to_sym}
 
 end
